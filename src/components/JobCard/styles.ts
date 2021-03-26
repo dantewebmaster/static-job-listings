@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, sizes } from '../../styles/variables';
 
 interface StyledCardProps {
   highlighted: boolean;
@@ -6,14 +7,15 @@ interface StyledCardProps {
 
 export const CardContainer = styled.div<StyledCardProps>`
   background: #fff;
-  box-shadow: 0 5px 16px #d7d7d7;
+  box-shadow: 0 5px 16px ${colors.grayShadow};
   border-radius: 4px;
   display: flex;
-  padding: 24px 32px;
-  margin-bottom: 24px;
+  padding: ${sizes.spacing.medium}px ${sizes.spacing.medium * 2}px;
+  margin-bottom: ${sizes.spacing.large}px;
   align-items: center;
 
-  border-left: ${({ highlighted }) => highlighted ? '4px solid #64baba' : ''};
+  border-left: 4px solid ${({ highlighted }) =>
+    highlighted ? `${colors.primary}` : 'transparent'};
 
   .logo {
     border-radius: 100%;
@@ -26,29 +28,29 @@ export const CardContainer = styled.div<StyledCardProps>`
     align-items: center;
 
     .company {
-      margin: 0 24px 0 0;
+      margin-right: ${sizes.spacing.large}px;
       color: #666;
       font-size: 14px;
     }
   }
 
   .position {
-    font-size: 16px;
-    margin: 16px 0;
+    font-size: 14px;
+    margin: 0 0 ${sizes.spacing.small}px;
 
     a {
       color: #333;
       text-decoration: none;
 
       &:hover {
-        color: #64baba;
+        color: ${colors.primary};
       }
     }
   }
 
   .card-infos {
     flex: 1;
-    margin-left: 24px;
+    margin-left: ${sizes.spacing.large}px;
   }
 
   .badges {
@@ -56,13 +58,13 @@ export const CardContainer = styled.div<StyledCardProps>`
       background: #333;
       padding: 4px 8px;
       border-radius: 30px;
-      margin-right: 8px;
+      margin-right: ${sizes.spacing.small}px;
       text-transform: uppercase;
       font-size: 10px;
       color: #fff;
 
       &.new {
-        background: #64baba;
+        background: ${colors.primary};
       }
     }
   }
@@ -73,16 +75,16 @@ export const CardContainer = styled.div<StyledCardProps>`
     align-items: center;
 
     div:hover {
-      background-color: #64baba;
+      background-color: ${colors.primary};
       color: #fff;
       cursor: pointer;
     }
   }
 
   .extra-infos span {
-    font-size: 12px;
+    font-size: ${sizes.fonts.small}px;
     color: #999;
-    margin-right: 32px;
+    margin-right: ${sizes.spacing.medium * 2}px;
     position: relative;
 
     /* dot divider */

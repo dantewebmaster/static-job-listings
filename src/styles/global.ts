@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors, sizes } from './variables'
 import HeaderBg from '../images/bg-header-desktop.svg';
 
 const GlobalStyle = createGlobalStyle`
@@ -18,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     background-size: cover;
     position: relative;
-    padding: 0 24px;
+    padding: 0 ${sizes.spacing.medium}px;
   }
 
   .filter {
@@ -28,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     padding: 16px 32px;
     border-radius: 4px;
-    box-shadow: 0 8px 16px #d7d7d7;
+    box-shadow: 0 8px 16px ${colors.grayShadow};
     transform: translateY(60px);
 
     .chips {
@@ -39,15 +40,15 @@ const GlobalStyle = createGlobalStyle`
   .container {
     display: block;
     max-width: 1068px;
-    margin: 48px auto;
-    padding: 24px;
+    margin: ${sizes.spacing.medium * 2}px auto;
+    padding: ${sizes.spacing.medium}px;
   }
 
   button {
     border: 0;
     background: transparent;
     cursor: pointer;
-    color: #64baba;
+    color: ${colors.primary};
 
     &:hover {
       text-decoration: underline;
@@ -56,11 +57,11 @@ const GlobalStyle = createGlobalStyle`
 
   @media (max-width: 768px) {
     .extra-margin-top {
-      margin-top: 124px;
+      margin-top: ${sizes.spacing.large * 5.5}px;
     }
 
     .filter {
-      padding: 16px;
+      padding: ${sizes.spacing.medium}px;
     }
   }
 `;

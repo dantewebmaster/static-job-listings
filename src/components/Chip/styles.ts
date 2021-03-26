@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../styles/variables';
 
 export const ChipContainer = styled.div`
   background: #f1f1f1;
@@ -21,7 +22,7 @@ export const ChipContainer = styled.div`
     width: 32px;
     cursor: pointer;
     border: 0;
-    background-color: #64baba;
+    background-color: ${colors.primary};
     color: #fff;
     transition: background-color 0.2s ease;
     outline: none;
