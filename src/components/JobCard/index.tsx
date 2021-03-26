@@ -7,7 +7,7 @@ export interface JobCardProps {
   onFilter: (tag: string) => void;
 }
 
-const JobCard = ({ job, onFilter }: JobCardProps) => {
+export default function JobCard({ job, onFilter }: JobCardProps) {
   const isHighlighted = job.featured && job.new;
   const tags = [...job.languages, ...job.tools];
 
@@ -40,6 +40,4 @@ const JobCard = ({ job, onFilter }: JobCardProps) => {
       </div>
     </CardContainer>
   );
-};
-
-export default JobCard;
+}

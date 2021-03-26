@@ -3,28 +3,31 @@ import { Job } from './models/job.interface';
 import JobCard from './components/JobCard';
 import Chip from './components/Chip';
 import { uniq } from './helpers/array';
-import data from './data.json';
+import jobsData from './data.json';
 
 export default function App() {
-  const [jobs] = useState(data);
-  const [filteredJobs, setFilteredJobs] = useState<Job[]>([]);
+  const [jobsList, setJobsList] = useState<Job[]>([]);
   const [filter, setFilter] = useState<string[]>([]);
 
   useEffect(() => {
     const filteredJobs: Job[] = [];
 
-    jobs.forEach((job) => {
-      const tags = [...job.languages, ...job.tools];
+    if (filter.length > 0) {
+      jobsData.forEach((job) => {
+        const tags = [...job.languages, ...job.tools];
 
-      const jobHasTag = tags.some((item) => filter.includes(item));
+        const jobHasTag = tags.some((item) => filter.includes(item));
 
-      if (jobHasTag) {
-        filteredJobs.push(job);
-      }
-    });
+        if (jobHasTag) {
+          filteredJobs.push(job);
+        }
+      });
 
-    setFilteredJobs(filteredJobs);
-  }, [filter, jobs]);
+      setJobsList(filteredJobs);
+    } else {
+      setJobsList(jobsData);
+    }
+  }, [filter]);
 
   function addFilter(tag: string) {
     const newFilter = [...filter, tag];
@@ -67,15 +70,9 @@ export default function App() {
         )}
       </header>
       <div className={`container ${addExtraMargin && 'extra-margin-top'}`}>
-        {filteredJobs.length === 0 &&
-          jobs.map((item: Job) => (
-            <JobCard key={item.id} job={item} onFilter={addFilter} />
-          ))}
-
-        {filteredJobs.length > 0 &&
-          filteredJobs.map((item: Job) => (
-            <JobCard key={item.id} job={item} onFilter={addFilter} />
-          ))}
+        {jobsList.map((item: Job) => (
+          <JobCard key={item.id} job={item} onFilter={addFilter} />
+        ))}
       </div>
     </>
   );
