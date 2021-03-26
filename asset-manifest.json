@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "./static/js/main.b9d5635c.chunk.js",
-    "main.js.map": "./static/js/main.b9d5635c.chunk.js.map",
+    "main.js": "./static/js/main.6b17cd16.chunk.js",
+    "main.js.map": "./static/js/main.6b17cd16.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.6fc260ce.js",
     "runtime-main.js.map": "./static/js/runtime-main.6fc260ce.js.map",
-    "static/js/2.fddf1f2b.chunk.js": "./static/js/2.fddf1f2b.chunk.js",
-    "static/js/2.fddf1f2b.chunk.js.map": "./static/js/2.fddf1f2b.chunk.js.map",
+    "static/js/2.00e93dc7.chunk.js": "./static/js/2.00e93dc7.chunk.js",
+    "static/js/2.00e93dc7.chunk.js.map": "./static/js/2.00e93dc7.chunk.js.map",
     "index.html": "./index.html",
-    "static/js/2.fddf1f2b.chunk.js.LICENSE.txt": "./static/js/2.fddf1f2b.chunk.js.LICENSE.txt",
+    "static/js/2.00e93dc7.chunk.js.LICENSE.txt": "./static/js/2.00e93dc7.chunk.js.LICENSE.txt",
     "static/media/bg-header-desktop.8694f466.svg": "./static/media/bg-header-desktop.8694f466.svg",
     "static/media/icon-remove.70c075ce.svg": "./static/media/icon-remove.70c075ce.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6fc260ce.js",
-    "static/js/2.fddf1f2b.chunk.js",
-    "static/js/main.b9d5635c.chunk.js"
+    "static/js/2.00e93dc7.chunk.js",
+    "static/js/main.6b17cd16.chunk.js"
   ]
 }
