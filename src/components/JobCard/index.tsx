@@ -24,7 +24,7 @@ const JobCard = ({ job, onFilter }: JobCardProps) => {
         </div>
 
         <h1 className="position">
-          <a href="#!">{job.position}</a>
+          <a href="#home">{job.position}</a>
         </h1>
 
         <div className="extra-infos">

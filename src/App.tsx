@@ -44,7 +44,7 @@ export default function App() {
 
   return (
     <>
-      <header className="header">
+      <header className="header" id="home">
         {filter.length > 0 && (
           <div className="filter">
             <div className="chips">
